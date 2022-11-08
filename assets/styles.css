@@ -54,9 +54,9 @@
         list-style: none;
     }
 
-    /* a {
+    a {
         transition: font-size .25s;
-    } */
+    }
 
     a:hover {
         /* font-style: italic; */
@@ -85,9 +85,9 @@
         display: block;
     }
 
-    /* h3 {
-        transition: all .25s;
-    } */
+    h3 {
+        transition: all .1s;
+    }
 
     figure.image-block:hover h3 {
         /* text-decoration: underline; */
