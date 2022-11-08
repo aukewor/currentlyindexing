@@ -15,8 +15,6 @@
     font-style: normal;
 }
 
-@media only screen {
-
     *,
     html {
         margin: 0;
@@ -61,6 +59,7 @@
     a:hover {
         /* font-style: italic; */
         font-size: 1.5em;
+        cursor: pointer;
     }
 
     img.image {
@@ -90,10 +89,6 @@
     }
 
     figure.image-block:hover h3 {
-        /* text-decoration: underline; */
-        /* background-color: yellow; */
-        /* opacity: 1; */
-        /* font-style: italic; */
         font-size: 1.5em;
     }
 
@@ -113,4 +108,13 @@
     figure h3 {
         margin-top: 1.2%;
     }
-}
+
+
+    section.print {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    img.print {
+        display: block;
+        height: 50vh;
+    }

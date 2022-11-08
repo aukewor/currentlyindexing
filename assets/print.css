@@ -1,4 +1,19 @@
-@media only print {
+@font-face {
+    font-family: 'grotesque_mt_stdregular';
+    src: url('grotesquemtstd.woff2') format('woff2'),
+         url('grotesquemtstd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'grotesque_mt_stditalic';
+    src: url('grotesquemtstd-italic.woff2') format('woff2'),
+         url('grotesquemtstd-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
     body {
         font-family: 'grotesque_mt_stdregular';
@@ -48,4 +63,4 @@
         page-break-before: always;
         page-break-after: avoid;
     }
-}
+/* } */
