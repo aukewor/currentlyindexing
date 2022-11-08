@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'grotesque_mt_stdregular';
+    src: url('grotesquemtstd.woff2') format('woff2'),
+         url('grotesquemtstd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'grotesque_mt_stditalic';
+    src: url('grotesquemtstd-italic.woff2') format('woff2'),
+         url('grotesquemtstd-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media only screen {
+
+    *,
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'grotesque_mt_stdregular';
+        font-size: 5vw;
+        /* font-size: 90px; */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    i {
+        font-family: 'grotesque_mt_stditalic';
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+        z-index: 1;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        transition: font-size .25s;
+    }
+
+    a:hover {
+        /* font-style: italic; */
+        font-size: 1.5em;
+    }
+
+    img.image {
+        display: none;
+        height: 80vh;
+        width: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 600px) {
+        img.image {
+            width: 75vw;
+            height: auto;
+        }
+    }
+
+    figure.image-block:hover img {
+        display: block;
+    }
+
+    h3 {
+        transition: all .25s;
+    }
+
+    figure.image-block:hover h3 {
+        /* text-decoration: underline; */
+        /* background-color: yellow; */
+        /* opacity: 1; */
+        /* font-style: italic; */
+        font-size: 1.5em;
+    }
+
+    figure:nth-child(1) {
+        border-top: 0;
+    }
+
+    figure {
+        border-top: .5px solid black;
+        border-bottom: .5px solid black;
+    }
+
+    figure h3 {
+        margin-top: 1.2%;
+    }
+}
