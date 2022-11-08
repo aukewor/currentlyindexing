@@ -84,9 +84,9 @@
         display: block;
     }
 
-    h3 {
+    /* h3 {
         transition: all .1s;
-    }
+    } */
 
     figure.image-block:hover h3 {
         font-size: 1.5em;
