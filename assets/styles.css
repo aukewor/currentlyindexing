@@ -26,7 +26,7 @@
 
     body {
         font-family: 'grotesque_mt_stdregular';
-        font-size: 5vw;
+        font-size: 3.6vw;
         /* font-size: 90px; */
         padding-left: 10px;
         padding-right: 10px;
@@ -54,9 +54,9 @@
         list-style: none;
     }
 
-    a {
+    /* a {
         transition: font-size .25s;
-    }
+    } */
 
     a:hover {
         /* font-style: italic; */
@@ -85,9 +85,9 @@
         display: block;
     }
 
-    h3 {
+    /* h3 {
         transition: all .25s;
-    }
+    } */
 
     figure.image-block:hover h3 {
         /* text-decoration: underline; */
@@ -99,6 +99,10 @@
 
     figure:nth-child(1) {
         border-top: 0;
+    }
+
+    figure:nth-last-child(1){
+        border-bottom: none;
     }
 
     figure {
