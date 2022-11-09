@@ -66,6 +66,8 @@
         display: none;
         height: 70vh;
         width: auto;
+        max-width: 85vw;
+        object-fit: contain;
         position: fixed;
         top: 50%;
         left: 50%;
