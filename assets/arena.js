@@ -145,4 +145,5 @@ window.addEventListener('DOMContentLoaded', () => {
 			setBasics(data)
 			parseBlocks(data)
 		})
+	
 });

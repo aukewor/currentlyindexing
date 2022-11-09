@@ -24,8 +24,7 @@
 
     body {
         font-family: 'grotesque_mt_stdregular';
-        font-size: 3.6vw;
-        /* font-size: 90px; */
+        font-size: 18px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -35,11 +34,12 @@
     }
 
     nav {
+        font-size: 3.95vw;
         position: sticky;
         top: 0;
         background-color: white;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 6px;
+        padding-bottom: 3px;
         border-bottom: 1px solid black;
         z-index: 1;
     }
@@ -57,12 +57,11 @@
     }
 
     a:hover {
-        /* font-style: italic; */
         font-size: 1.5em;
         cursor: pointer;
     }
 
-    img.image {
+    video, img.image {
         display: none;
         height: 70vh;
         width: auto;
@@ -82,15 +81,19 @@
         }
     }
 
-    figure.image-block:hover img {
+    figure:hover img, figure:hover video{
         display: block;
     }
 
-    /* h3 {
+    h3 {
         transition: all .1s;
-    } */
+        width: max-content;
+        display: inline;
+        height: 1em;
+        white-space: nowrap;
+    }
 
-    figure.image-block:hover h3 {
+    figure:hover h3, figure:hover fig {
         font-size: 1.5em;
     }
 
@@ -105,11 +108,28 @@
     figure {
         border-top: .5px solid black;
         border-bottom: .5px solid black;
+        padding-top: .2em;
+        padding-bottom: .1em;
+
+        width: 100%;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
-    figure h3 {
-        margin-top: 1.2%;
+    figcaption.description {
+        color: lightgray;
+        width: max-content;
+        display: inline;
+
+        white-space: nowrap;
+
     }
+
 
 
     section.print {
