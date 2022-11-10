@@ -85,6 +85,10 @@
             width: 70vw;
             height: auto;
         }
+        figure.video-file-block:hover h3::before{
+            font-family: monospace;
+        }
+    
     }
 
     /* figure:hover img, figure:hover video{
@@ -94,8 +98,8 @@
     figure.video-file-block:hover h3::before{
         content: "▶";
         font-size: .75em;
-        font-family: monospace;
     }
+
     figure.video-file-block h3 {
         cursor: pointer;
     }
