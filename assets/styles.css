@@ -24,10 +24,11 @@
 
     body {
         font-family: 'grotesque_mt_stdregular';
-        font-size: 3.6vw;
-        /* font-size: 90px; */
+        font-size: 0;
         padding-left: 10px;
         padding-right: 10px;
+
+        overflow-y: hidden;
     }
 
     i {
@@ -35,11 +36,12 @@
     }
 
     nav {
+        font-size: 3.95vw;
         position: sticky;
         top: 0;
         background-color: white;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 6px;
+        padding-bottom: 3px;
         border-bottom: 1px solid black;
         z-index: 1;
     }
@@ -57,12 +59,15 @@
     }
 
     a:hover {
-        /* font-style: italic; */
         font-size: 1.5em;
         cursor: pointer;
     }
 
-    img.image {
+    /* body {
+        overflow-y: hidden;
+    } */
+
+    video, img.image {
         display: none;
         height: 70vh;
         width: auto;
@@ -82,15 +87,27 @@
         }
     }
 
-    figure.image-block:hover img {
+    /* figure:hover img, figure:hover video{
         display: block;
-    }
-
-    /* h3 {
-        transition: all .1s;
     } */
 
-    figure.image-block:hover h3 {
+    figure.video-file-block:hover h3::before{
+        content: "▶";
+        font-size: .75em;
+    }
+    figure.video-file-block h3 {
+        cursor: pointer;
+    }
+
+    h3 {
+        transition: all .1s;
+        width: max-content;
+        display: inline;
+        height: 1em;
+        white-space: nowrap;
+    }
+
+    figure:hover h3, figure:hover figcaption {
         font-size: 1.5em;
     }
 
@@ -105,18 +122,24 @@
     figure {
         border-top: .5px solid black;
         border-bottom: .5px solid black;
+        padding-top: .2em;
+        padding-bottom: .1em;
+
+        width: 100%;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
-    figure h3 {
-        margin-top: 1.2%;
-    }
+    figcaption.description {
+        margin-left: .5em;
+        color: lightgray;
+        width: max-content;
+        display: inline;
 
-
-    section.print {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    img.print {
-        display: block;
-        height: 50vh;
+        white-space: nowrap;
     }

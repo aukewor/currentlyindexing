@@ -8,7 +8,6 @@
 	<link href="assets/styles.css" rel="stylesheet">
 	<script src="assets/arena.js" type="text/javascript"></script>
 	<script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
-	<script src="assets/smoothscroll.min.js"> </script>
 
 	<link href="assets/Favicon128.png" rel="icon">
 
@@ -68,46 +67,14 @@
 	</section>
 
 
-	<!-- These are the templates for the various block types, below. -->
-	<!-- You can move/nest/remove any of the insertion points! -->
-	<!-- For example, you could only show images for actual image blocks. -->
-	<!-- You could not show the type if you group them by section, above. -->
-
-	<!-- Spotify, Soundcloud, etc. -->
-	<template id="audio-embed-block">
-		<figure class="audio-embed">
-			<!-- You can use the container classes to style a whole type. -->
-			<h3 class="title"></h3> <!-- Block title inserts here. -->
-			<img class="image"> <!-- Image/cover image source inserts here. -->
-			<div class="embed"></div> <!-- Embed iframe inserts here. -->
-			<a class="link">
-				<!-- Original URL inserts here. -->
-				<p class="link-title"></p> <!-- Link title inserts here. -->
-			</a>
-			<figcaption class="description"></figcaption> <!-- Block description inserts here. -->
-			 <!-- Block type/kind inserts here. -->
-		</figure>
-	</template>
-
-	<!-- Uploaded audio files. -->
-	<template id="audio-file-block">
-		<figure class="audio-file-block">
-			<h3 class="title"></h3>
-			<img class="image">
-			<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
-			<figcaption class="description"></figcaption>
-			
-		</figure>
-	</template>
-
 	<template id="image-block">
 		<figure class="image-block">
-			<h3 class="title"></h3>
+			<h3 class="title"></h3>			
+			<figcaption class="description"></figcaption>
 			<img class="image">
 			<a class="link">
 				<p class="link-title"></p>
 			</a>
-			<figcaption class="description"></figcaption>
 			
 		</figure>
 	</template>
@@ -120,7 +87,6 @@
 			</a>
 			<img class="image">
 			<figcaption class="description"></figcaption>
-			
 		</figure>
 	</template>
 
@@ -133,7 +99,6 @@
 				<p class="link-title"></p> <!-- Repeats the block title. -->
 			</a>
 			<figcaption class="description"></figcaption>
-			
 		</figure>
 	</template>
 
@@ -172,5 +137,6 @@
 	</template>
 
 </body>
+<script defer src="./assets/app.js"></script>
 
 </html>

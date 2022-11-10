@@ -9,7 +9,8 @@
 	<!-- <link href="assets/print.css" rel="stylesheet"> -->
 
 	<script src="assets/arena.js" type="text/javascript"></script>
-	<script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 	<link href="assets/Favicon128.png" rel="icon">
 
@@ -58,10 +59,8 @@
 
 	<h1 id="channel-title"></h1>
 
-	<!-- You could move the classes to different section elements to separate the types! -->
 	<section
 		class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
-		<!-- <h2>Blocks</h2> -->
 	</section>
 
 	<template id="image-block">
@@ -80,17 +79,9 @@
 			<h3 class="title"></h3>
 			<div class="content"></div> <!-- Text blocks insert their HTML here. -->
 			<figcaption class="description"></figcaption>
-
 		</figure>
 	</template>
-	<a id="print">Print</a>
+	<!-- <a id="print">Print</a> -->
 </body>
-<script>
-	const printbtn = document.querySelector('a#print')
-	const CSS = document.querySelectorAll('link')[1]
-
-	printbtn.addEventListener('click', function () {
-		CSS.href = "assets/print.css";
-	})
-</script>
+<script defer src="./assets/app.js"></script>
 </html>
