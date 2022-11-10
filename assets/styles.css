@@ -24,9 +24,11 @@
 
     body {
         font-family: 'grotesque_mt_stdregular';
-        font-size: 18px;
+        font-size: 0;
         padding-left: 10px;
         padding-right: 10px;
+
+        overflow-y: hidden;
     }
 
     i {
@@ -61,6 +63,10 @@
         cursor: pointer;
     }
 
+    /* body {
+        overflow-y: hidden;
+    } */
+
     video, img.image {
         display: none;
         height: 70vh;
@@ -81,8 +87,16 @@
         }
     }
 
-    figure:hover img, figure:hover video{
+    /* figure:hover img, figure:hover video{
         display: block;
+    } */
+
+    figure.video-file-block:hover h3::before{
+        content: "▶";
+        font-size: .75em;
+    }
+    figure.video-file-block h3 {
+        cursor: pointer;
     }
 
     h3 {
@@ -93,7 +107,7 @@
         white-space: nowrap;
     }
 
-    figure:hover h3, figure:hover fig {
+    figure:hover h3, figure:hover figcaption {
         font-size: 1.5em;
     }
 
@@ -122,21 +136,10 @@
     }
 
     figcaption.description {
+        margin-left: .5em;
         color: lightgray;
         width: max-content;
         display: inline;
 
         white-space: nowrap;
-
-    }
-
-
-
-    section.print {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    img.print {
-        display: block;
-        height: 50vh;
     }
