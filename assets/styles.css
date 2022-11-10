@@ -94,6 +94,7 @@
     figure.video-file-block:hover h3::before{
         content: "▶";
         font-size: .75em;
+        font-family: monospace;
     }
     figure.video-file-block h3 {
         cursor: pointer;

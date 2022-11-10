@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // find children of a image or video, set display = block, and video plays;
 // when mouseout, video pauses.
 
+// if image display is block, add event listener click to be none
+
 const display = function (element){
     element.addEventListener('mouseenter', function(){
 
@@ -39,7 +41,6 @@ const display = function (element){
             element.querySelector('img').style.display = 'block'
         } else if (element.classList.contains('video-file-block')) {
             element.querySelector('video').style.display = 'block'
-            // element.querySelector('h3').insertAdjacentHTML('beforebegin', '&#9654;');
             element.addEventListener('click', ()=>{
                 element.querySelector('video').play()
             })
@@ -55,7 +56,7 @@ const display = function (element){
             element.querySelector('video').pause()
         } else {
             console.log('here it is!')
-        }})
+        }})     
 }
 
 
