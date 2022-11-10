@@ -55,7 +55,7 @@
     }
 
     a {
-        transition: font-size .25s;
+        transition: font-size .1s;
     }
 
     a:hover {
@@ -100,7 +100,7 @@
     }
 
     h3 {
-        transition: all .1s;
+        /* transition: all .1s; */
         width: max-content;
         display: inline;
         height: 1em;
