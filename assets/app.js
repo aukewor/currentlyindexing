@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(typeSize)
         bodyTag.style.fontSize = `${typeSize}px`
 
-        items.forEach( item => display(item))
-        
+        items.forEach( item => {
+            display(item)
+            turnoffImage(item)
+        })
      }
      setTimeout(go, 1000)
 }, false);
@@ -32,7 +34,20 @@ document.addEventListener('DOMContentLoaded', function () {
 // find children of a image or video, set display = block, and video plays;
 // when mouseout, video pauses.
 
-// if image display is block, add event listener click to be none
+// inside every figure element, if image display is block, add event listener click to be none
+const turnoffImage = function(element){
+    if (element.classList.contains('image-block')){
+        element.querySelector('img').addEventListener('click', ()=>{
+            element.querySelector('img').style.display = 'none'
+        })
+    } else if (element.classList.contains('video-file-block')){
+        element.querySelector('video').addEventListener('click', ()=>{
+            element.querySelector('video').style.display = 'none'
+        })
+    }
+
+}
+
 
 const display = function (element){
     element.addEventListener('mouseenter', function(){
@@ -45,7 +60,7 @@ const display = function (element){
                 element.querySelector('video').play()
             })
         } else {
-            console.log('here it is!')
+            console.log('This block type has not been configured!')
         }
     })
     element.addEventListener('mouseleave', function(){
