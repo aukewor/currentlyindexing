@@ -43,14 +43,12 @@
 </head>
 
 <body>
-	<!-- <div id="curtain"></div> -->
 	<nav>
 		<a href="./index.html">hyeree ro</a>:
 		<a href="./visit.html">visit</a>,
 		<i>images collected</i>,
 		<a href="./studio.html">studio</a> and
 		<a href="./texts.html">texts</a>
-
 	</nav>
 	<li id="channel-description"></li>
 
@@ -63,6 +61,33 @@
 		class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 	</section>
 
+	<!-- Spotify, Soundcloud, etc. -->
+	<template id="audio-embed-block">
+		<figure class="audio-embed">
+			<!-- You can use the container classes to style a whole type. -->
+			<h3 class="title"></h3> <!-- Block title inserts here. -->
+			<img class="image"> <!-- Image/cover image source inserts here. -->
+			<div class="embed"></div> <!-- Embed iframe inserts here. -->
+			<a class="link">
+				<!-- Original URL inserts here. -->
+				<p class="link-title"></p> <!-- Link title inserts here. -->
+			</a>
+			<figcaption class="description"></figcaption> <!-- Block description inserts here. -->
+			 <!-- Block type/kind inserts here. -->
+		</figure>
+	</template>
+
+	<!-- Uploaded audio files. -->
+	<template id="audio-file-block">
+		<figure class="audio-file-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
+			<figcaption class="description"></figcaption>
+			
+		</figure>
+	</template>
+
 	<template id="image-block">
 		<figure class="image-block">
 			<h3 class="title"></h3>
@@ -71,9 +96,35 @@
 				<p class="link-title"></p>
 			</a>
 			<figcaption class="description"></figcaption>
-
+			
 		</figure>
 	</template>
+
+	<template id="link-block">
+		<figure class="link-block">
+			<a class="link">
+				<!-- <p class="link-title"></p> -->
+				<h3 class="title"></h3>
+			</a>
+			<img class="image">
+			<figcaption class="description"></figcaption>
+			
+		</figure>
+	</template>
+
+	<template id="pdf-block">
+		<figure class="pdf-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<a class="link">
+				<!-- PDF link inserts here. -->
+				<p class="link-title"></p> <!-- Repeats the block title. -->
+			</a>
+			<figcaption class="description"></figcaption>
+			
+		</figure>
+	</template>
+
 	<template id="text-block">
 		<figure class="text-block">
 			<h3 class="title"></h3>
@@ -81,7 +132,31 @@
 			<figcaption class="description"></figcaption>
 		</figure>
 	</template>
-	<!-- <a id="print">Print</a> -->
+
+	<!-- YouTube, Vimeo, etc. -->
+	<template id="video-embed-block">
+		<figure class="video-embed-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<div class="embed"></div>
+			<a class="link">
+				<p class="link-title"></p>
+			</a>
+			<figcaption class="description"></figcaption>
+			
+		</figure>
+	</template>
+
+	<!-- Uploaded video files. -->
+	<template id="video-file-block">
+		<figure class="video-file-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<video class="video" controls></video> <!-- Video source inserts here. -->
+			<figcaption class="description"></figcaption>
+			
+		</figure>
+	</template>
 </body>
 <script defer src="./assets/app.js"></script>
 </html>
