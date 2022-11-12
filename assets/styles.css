@@ -15,6 +15,25 @@
     font-style: normal;
 }
 
+
+/* @font-face {
+    font-family: 'FannGrotesquePro-Regular';
+    src: url('FannGrotesquePro-Regular.woff2') format('woff2'),
+         url('FannGrotesquePro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'FannGrotesquePro-Italic';
+    src: url('FannGrotesquePro-Italic.woff2') format('woff2'),
+         url('FannGrotesquePro-Italic.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
     *,
     html,body {
         margin: 0;
@@ -38,7 +57,6 @@
 
     i {
         font-family: 'grotesque_mt_stditalic', Helvetica, Arial, sans-serif;
-        font-style: italic;
     }
 
     nav {
