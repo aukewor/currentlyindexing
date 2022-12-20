@@ -31,17 +31,33 @@
         color: DodgerBlue;
     }
 
-    
+    article {
+        position: relative;
+        top: 0;
+        font-size: 36px;
+        letter-spacing: .025em;
+        line-height: 1.25;
+        text-align: justify;
+    }
 
     nav {
         font-size: 36px;
+        letter-spacing: .025em;
         line-height: 1.35;
         background-color: white;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid dodgerblue;
         z-index: 1;
         height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
+    button {
+        color: dodgerblue;
+        cursor: pointer;
+    }
     section {
         height: 0;
         display: flex;
@@ -116,7 +132,7 @@ a:hover {
     } */
 
     figure {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid dodgerblue;
 
         width: 100%;
         height: fit-content;
