@@ -9,33 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const navHeight = navTag.offsetHeight
         const itemNum = items.length
 
-        sectionTag.style.height = window.innerHeight - navHeight + "px"
-        const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.3 * itemNum)
+        sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
+        const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.4 * itemNum)
         bodyTag.style.fontSize = `${typeSize}px`
-
-        if (typeSize >= 30) {
-            sectionTag.style.letterSpacing = `${-0.0003 * typeSize}em`
-        } else if (typeSize <= 20) {
-            sectionTag.style.letterSpacing = `${0.0025 * typeSize}em`
-        } else {
-            sectionTag.style.letterSpacing = '0'
-        }
-
-        console.log(0.039 * window.innerWidth >= 30)
-        if (0.039 * window.innerWidth >= 30) {
-            navTag.style.letterSpacing = `${-0.0003 * typeSize}em`
-        } else if (0.039 * window.innerWidth <= 20) {
-            navTag.style.letterSpacing = `${0.0025 * typeSize}em`
-        } else {
-            navTag.style.letterSpacing = '0'
-        }
-        // sectionTag.style.letterSpacing = `${(-0.0146 * typeSize) + 0.423}em`
-
-        console.log("this page has " + itemNum + " items")
-        console.log("window height is" + window.innerHeight)
-        console.log("section height is" + sectionTag.offsetHeight)
-        console.log("type size is" + " " + typeSize)
-
 
         items.forEach(item => {
             display(item)

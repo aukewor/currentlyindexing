@@ -1,38 +1,10 @@
 @font-face {
-    font-family: 'grotesque_mt_stdregular';
-    src: url('grotesquemtstd.woff2') format('woff2'),
-         url('grotesquemtstd.woff') format('woff');
+    font-family: 'edu_p3rman3ntbook';
+    src: url('edup3rman3nt-book.woff2') format('woff2'),
+         url('edup3rman3nt-book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
-
-@font-face {
-    font-family: 'grotesque_mt_stditalic';
-    src: url('grotesquemtstd-italic.woff2') format('woff2'),
-         url('grotesquemtstd-italic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* @font-face {
-    font-family: 'FannGrotesquePro-Regular';
-    src: url('FannGrotesquePro-Regular.woff2') format('woff2'),
-         url('FannGrotesquePro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'FannGrotesquePro-Italic';
-    src: url('FannGrotesquePro-Italic.woff2') format('woff2'),
-         url('FannGrotesquePro-Italic.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 
     *,
     html,body {
@@ -42,10 +14,10 @@
     }
 
     body {
-        font-family: 'grotesque_mt_stdregular', Helvetica, Arial, sans-serif;
+        margin: 20px;
+
+        font-family: 'edu_p3rman3ntbook', Helvetica, Arial, sans-serif;
         font-size: 0px;
-        padding-left: 10px;
-        padding-right: 10px;
         line-height: 1.5;
 
         overflow-y: hidden;
@@ -56,15 +28,15 @@
     }
 
     i {
-        font-family: 'grotesque_mt_stditalic', Helvetica, Arial, sans-serif;
+        color: DodgerBlue;
     }
 
+    
+
     nav {
-        font-size: 3.9vw;
-        line-height: 1;
+        font-size: 36px;
+        line-height: 1.35;
         background-color: white;
-        padding-top: .2em;
-        padding-bottom: 0;
         border-bottom: 1px solid black;
         z-index: 1;
         height: fit-content;
@@ -89,9 +61,10 @@
         transition: font-size .1s;
     }
 
-    a:hover {
-        font-size: 1.5em;
+a:hover {
         cursor: pointer;
+        background-color: dodgerblue;
+        color: white;
     }
 
     video, img.image {
@@ -144,8 +117,6 @@
 
     figure {
         border-bottom: 1px solid black;
-        /* padding-top: .25em;
-        padding-bottom: .05em; */
 
         width: 100%;
         height: fit-content;
@@ -156,6 +127,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+
+        transition: height, .1s;
+
     }
 
     figcaption.description {
@@ -169,13 +143,15 @@
     }
 
     h3 {
+        /* margin: 0 5px; */
         width: max-content;
         display: inline;
-        /* height: 1em; */
         white-space: nowrap;
     }
 
     figure:hover h3, figure:hover figcaption {
-        font-size: 1.5em;
-        /* padding-top: 0.05em; */
+        /* font-size: 1.5em; */
+        color: white;
+        background-color: dodgerblue;
+        /* background-color: aliceblue; */
     }
