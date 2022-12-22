@@ -1,23 +1,34 @@
 const bodyTag = document.querySelector('body')
 const navTag = document.querySelector('nav')
 const sectionTag = document.querySelector('section')
+const buttonTag = document.querySelector('button')
+const articleTag = document.querySelector('article')
 
+const removeBlurb = function(){
+    buttonTag.addEventListener('click', function(){
+        articleTag.remove()
+        go()
+    })
+}
+
+const go = function () {
+    const items = document.querySelectorAll('section figure')
+    const navHeight = navTag.offsetHeight
+    const itemNum = items.length
+
+    sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
+    const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.4 * itemNum)
+    bodyTag.style.fontSize = `${typeSize}px`
+
+    items.forEach(item => {
+        display(item)
+        turnoffImage(item)
+    })
+    removeBlurb()
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-    function go() {
-        const items = document.querySelectorAll('section figure')
-        const navHeight = navTag.offsetHeight
-        const itemNum = items.length
-
-        sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
-        const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.4 * itemNum)
-        bodyTag.style.fontSize = `${typeSize}px`
-
-        items.forEach(item => {
-            display(item)
-            turnoffImage(item)
-        })
-    }
+    
     setTimeout(go, 1000)
 
     window.addEventListener('resize', () => {
