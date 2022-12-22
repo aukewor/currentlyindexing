@@ -6,7 +6,8 @@ document.head.appendChild(markdownIt)
 
 
 const setBasics = (data) => {
-	document.title = data.title
+	// document.title = data.title
+	document.title = "Currently Indexing"
 	document.getElementById('channel-title').innerHTML = data.title
 	document.getElementById('channel-description').innerHTML = window.markdownit().render(data.metadata.description)
 
