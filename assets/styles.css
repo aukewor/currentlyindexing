@@ -12,6 +12,9 @@
         padding: 0;
         box-sizing: border-box;
     }
+    html {
+        height: 100vh;
+    }
 
     body {
         margin: 20px;
@@ -19,16 +22,15 @@
         font-family: 'edu_p3rman3ntbook', Helvetica, Arial, sans-serif;
         font-size: 0px;
         line-height: 1.5;
-
         overflow-y: hidden;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
 
     i {
-        color: DodgerBlue;
+        color: #67A6E4;
     }
 
     article {
@@ -45,7 +47,7 @@
         letter-spacing: .025em;
         line-height: 1.35;
         background-color: white;
-        border-bottom: 1px solid dodgerblue;
+        border-bottom: 1px solid #67A6E4;
         z-index: 1;
         height: fit-content;
         width: 100%;
@@ -55,7 +57,7 @@
     }
 
     button {
-        color: dodgerblue;
+        color: #67A6E4;
         cursor: pointer;
     }
     section {
@@ -79,7 +81,7 @@
 
 a:hover {
         cursor: pointer;
-        background-color: dodgerblue;
+        background-color: #67A6E4;
         color: white;
     }
 
@@ -97,6 +99,15 @@ a:hover {
     }
 
     @media only screen and (max-width: 600px) {
+        body {
+            margin: 10px;
+        }
+        nav {
+            font-size: 24px;
+        }    
+        article {
+            font-size: 24px;
+        }
         img.image {
             width: 70vw;
             height: auto;
@@ -132,7 +143,7 @@ a:hover {
     } */
 
     figure {
-        border-bottom: 1px solid dodgerblue;
+        border-bottom: 1px solid #67A6E4;
 
         width: 100%;
         height: fit-content;
@@ -168,6 +179,6 @@ a:hover {
     figure:hover h3, figure:hover figcaption {
         /* font-size: 1.5em; */
         color: white;
-        background-color: dodgerblue;
+        background-color: #67A6E4;
         /* background-color: aliceblue; */
     }

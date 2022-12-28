@@ -1,15 +1,7 @@
 const bodyTag = document.querySelector('body')
 const navTag = document.querySelector('nav')
 const sectionTag = document.querySelector('section')
-const buttonTag = document.querySelector('button')
-const articleTag = document.querySelector('article')
 
-const removeBlurb = function(){
-    buttonTag.addEventListener('click', function(){
-        articleTag.remove()
-        go()
-    })
-}
 
 const go = function () {
     const items = document.querySelectorAll('section figure')
@@ -24,7 +16,6 @@ const go = function () {
         display(item)
         turnoffImage(item)
     })
-    removeBlurb()
 }
 
 document.addEventListener('DOMContentLoaded', function () {
