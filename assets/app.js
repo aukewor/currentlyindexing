@@ -1,5 +1,5 @@
 const bodyTag = document.querySelector('body')
-const navTag = document.querySelector('nav')
+const navTag = document.querySelector('header')
 const sectionTag = document.querySelector('section')
 
 
@@ -9,7 +9,7 @@ const go = function () {
     const itemNum = items.length
 
     sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
-    const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.4 * itemNum)
+    const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
     bodyTag.style.fontSize = `${typeSize}px`
 
     items.forEach(item => {
@@ -19,15 +19,15 @@ const go = function () {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    
-    setTimeout(go, 1000)
 
-    window.addEventListener('resize', () => {
-        go()
-    })
+    setTimeout(go, 2000)
 
 }, false);
 
+
+window.addEventListener('resize', () => {
+    go()
+})
 
 // inside every figure element, if image display is block, add event listener click to be none
 const turnoffImage = function (element) {
