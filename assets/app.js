@@ -20,7 +20,7 @@ const go = function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    setTimeout(go, 2000)
+    setTimeout(go, 2400)
 
 }, false);
 
