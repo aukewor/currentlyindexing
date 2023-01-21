@@ -1,3 +1,5 @@
+// ————————— are.na CMS —————————
+
 // The Description is returned as Markdown, of course.
 let markdownIt = document.createElement('script')
 markdownIt.src = 'https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js';
@@ -136,15 +138,13 @@ const renderBlock = (block, type) => {
 }
 
 
-
 window.addEventListener('DOMContentLoaded', () => {
 	const channel = document.getElementById('channel-url').href.split('/').filter(Boolean).pop()
 
-	fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
+	fetch(`https://api.are.na/v2/channels/${channel}?per=100`, { cache: 'no-store' })
 		.then(response => response.json())
 		.then(data => {
 			setBasics(data)
 			parseBlocks(data)
 		})
-	
 });
