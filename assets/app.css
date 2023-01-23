@@ -26,6 +26,7 @@ body {
     padding: 0 10px;
     font-family: 'edu_p3rman3ntbook', Helvetica, Arial, sans-serif;
     max-height: 100vh;
+    height: 100vh;
     overflow-y: hidden;
     background-color: white;
     display: flex;
