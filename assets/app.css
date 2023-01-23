@@ -8,7 +8,7 @@
 
 @keyframes loading {
     0%{
-        background-color: aliceblue;
+        background-color: dodgerblue;
 
 
     }
@@ -59,6 +59,11 @@ header {
     letter-spacing: .03em;
     line-height: 1.25;
 }
+
+#HR-link{
+    margin-left: 10px;
+}
+
 article {
     padding-top: 4px;
     margin-bottom: 10px;
