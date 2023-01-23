@@ -4,6 +4,10 @@ const sectionTag = document.querySelector('section')
 
 
 const go = function () {
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+
     const items = document.querySelectorAll('section figure')
     const navHeight = navTag.offsetHeight
     const itemNum = items.length
@@ -11,7 +15,7 @@ const go = function () {
     const secHeight = sectionTag.getBoundingClientRect().height
     // sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
     // const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
-    const typeSize = (secHeight - (itemNum - 1)) / (1.2 * itemNum)
+    const typeSize = (secHeight - (itemNum - 1)) / (1.25 * itemNum)
     console.log(secHeight)
     bodyTag.style.fontSize = `${typeSize}px`
 
@@ -20,8 +24,6 @@ const go = function () {
         turnoffImage(item)
     })
 
-    let vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
 }
 
 document.addEventListener('DOMContentLoaded', function () {
