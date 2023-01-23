@@ -15,7 +15,7 @@ const go = function () {
     const secHeight = sectionTag.getBoundingClientRect().height
     // sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
     // const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
-    const typeSize = (secHeight - (itemNum - 1)) / (1.25 * itemNum)
+    const typeSize = (secHeight - (itemNum - 1)) / (1.2 * itemNum)
     console.log(secHeight)
     bodyTag.style.fontSize = `${typeSize}px`
 
