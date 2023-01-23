@@ -19,6 +19,9 @@ const go = function () {
         display(item)
         turnoffImage(item)
     })
+
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
 }
 
 document.addEventListener('DOMContentLoaded', function () {
