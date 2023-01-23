@@ -8,8 +8,11 @@ const go = function () {
     const navHeight = navTag.offsetHeight
     const itemNum = items.length
 
+    const secHeight = sectionTag.getBoundingClientRect().height
     // sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
-    const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
+    // const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
+    const typeSize = (secHeight - (itemNum - 1)) / (1.2 * itemNum)
+    console.log(secHeight)
     bodyTag.style.fontSize = `${typeSize}px`
 
     items.forEach(item => {
@@ -20,7 +23,7 @@ const go = function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    setTimeout(go, 2400)
+    setTimeout(go, 3300)
 
 }, false);
 

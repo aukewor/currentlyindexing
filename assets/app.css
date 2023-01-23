@@ -8,12 +8,16 @@
 
 @keyframes loading {
     0%{
-        background-color: gray;
+        background-color: aliceblue;
 
 
     }
-    100% {
+    99% {
         background-color: white;
+
+    }
+    100% {
+        background-color: dodgerblue;
 
     }
 }
