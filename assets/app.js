@@ -8,7 +8,7 @@ const go = function () {
     const navHeight = navTag.offsetHeight
     const itemNum = items.length
 
-    sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
+    // sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
     const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
     bodyTag.style.fontSize = `${typeSize}px`
 
