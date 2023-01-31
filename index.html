@@ -44,7 +44,8 @@
 		where she keeps a record of images and text generated and collected from her work, studio, and daily life.
 		The site will remain
 		changing across time as there are always work and life in progress. Powered by <a target="_blank"
-			href="https://github.com/typography-and-interaction-too/archive">are.na</a>, website by <a target="_blank" href="https://mianweiwang.com/">Mianwei Wang</a>.
+			href="https://github.com/typography-and-interaction-too/archive">are.na</a>, website by <a target="_blank"
+			href="https://mianweiwang.com/">Mianwei Wang</a>.
 	</article>
 	<header>
 		<nav>
@@ -139,6 +140,23 @@
 		</figure>
 	</template>
 
+	<p>a</p>
+	<div>Website visit count:</div>
+	<div class="website-counter"></div>
+	<button id="reset">Reset</button>
 </body>
+<script>
+	var visitCount = localStorage.getItem("page_view");
+
+	// Check if page_view entry is present
+	if (visitCount) {
+		visitCount = Number(visitCount) + 1;
+		localStorage.setItem("page_view", visitCount);
+	} else {
+		visitCount = 1;
+		localStorage.setItem("page_view", 1);
+	}
+	console.log("total visit:" + visitCount);
+</script>
 
 </html>
