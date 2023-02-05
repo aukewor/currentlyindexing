@@ -118,7 +118,6 @@ video, img.image {
 
 @media only screen and (max-width: 600px) {
     body {
-        margin: 10px;
         letter-spacing: .06em;
     }
     header, article {
@@ -130,7 +129,6 @@ video, img.image {
         width: auto;
         height: auto;
         min-height: 20vh;
-        /* max-height: 80vh; */
     }
 }
 

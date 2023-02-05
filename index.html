@@ -6,36 +6,8 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<link href="assets/reset.css" rel="stylesheet">
 	<link href="assets/app.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
-
 	<link href="assets/Favicon128.png" rel="icon">
 
-	<script>
-		(function () {
-			var lastTime = 0;
-			var vendors = ['ms', 'moz', 'webkit', 'o'];
-			for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
-					|| window[vendors[x] + 'CancelRequestAnimationFrame'];
-			}
-
-			if (!window.requestAnimationFrame)
-				window.requestAnimationFrame = function (callback, element) {
-					var currTime = new Date().getTime();
-					var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-					var id = window.setTimeout(function () { callback(currTime + timeToCall); },
-						timeToCall);
-					lastTime = currTime + timeToCall;
-					return id;
-				};
-
-			if (!window.cancelAnimationFrame)
-				window.cancelAnimationFrame = function (id) {
-					clearTimeout(id);
-				};
-		}())
-	</script>
 </head>
 
 <body>
@@ -56,107 +28,5 @@
 			<a href="./texts.html">Texts</a>
 		</nav>
 	</header>
-
-
-	<li id="channel-description"></li>
-
-	<!-- Replace this URL with your channel to connect the API! -->
-	<a href="https://www.are.na/hyeree-ro-7y19scgdsbg/portfolio-dw0rfntxba0" id="channel-url">
-	</a>
-
-	<h1 id="channel-title"></h1>
-
-	<!-- <section
-		class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
-	</section> -->
-
-
-	<template id="image-block">
-		<figure class="image-block">
-			<h3 class="title"></h3>
-			<figcaption class="description"></figcaption>
-			<img class="image">
-			<a class="link">
-				<p class="link-title"></p>
-			</a>
-
-		</figure>
-	</template>
-
-	<template id="link-block">
-		<figure class="link-block">
-			<a class="link">
-				<!-- <p class="link-title"></p> -->
-				<h3 class="title"></h3>
-			</a>
-			<img class="image">
-			<figcaption class="description"></figcaption>
-		</figure>
-	</template>
-
-	<template id="pdf-block">
-		<figure class="pdf-block">
-			<h3 class="title"></h3>
-			<img class="image">
-			<a class="link">
-				<!-- PDF link inserts here. -->
-				<p class="link-title"></p> <!-- Repeats the block title. -->
-			</a>
-			<figcaption class="description"></figcaption>
-		</figure>
-	</template>
-
-	<template id="text-block">
-		<figure class="text-block">
-			<h3 class="title"></h3>
-			<div class="content"></div> <!-- Text blocks insert their HTML here. -->
-			<figcaption class="description"></figcaption>
-
-		</figure>
-	</template>
-
-	<!-- YouTube, Vimeo, etc. -->
-	<template id="video-embed-block">
-		<figure class="video-embed-block">
-			<h3 class="title"></h3>
-			<img class="image">
-			<div class="embed"></div>
-			<a class="link">
-				<p class="link-title"></p>
-			</a>
-			<figcaption class="description"></figcaption>
-
-		</figure>
-	</template>
-
-	<!-- Uploaded video files. -->
-	<template id="video-file-block">
-		<figure class="video-file-block">
-			<h3 class="title"></h3>
-			<img class="image">
-			<video class="video" controls></video> <!-- Video source inserts here. -->
-			<figcaption class="description"></figcaption>
-
-		</figure>
-	</template>
-
-	<p>a</p>
-	<div>Website visit count:</div>
-	<div class="website-counter"></div>
-	<button id="reset">Reset</button>
 </body>
-<script>
-	var visitCount = localStorage.getItem("page_view");
-
-	// Check if page_view entry is present
-	if (visitCount) {
-		visitCount = Number(visitCount) + 1;
-		localStorage.setItem("page_view", visitCount);
-	} else {
-		visitCount = 1;
-		localStorage.setItem("page_view", 1);
-	}
-	console.log("total visit:" + visitCount);
-</script>
-
 </html>
