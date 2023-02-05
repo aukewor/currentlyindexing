@@ -8,7 +8,7 @@ const navTag = document.querySelector('header')
 const channelId = document.getElementById('channel-url').href.split('/').filter(Boolean).pop()
 
 async function getChannelInfo(channelId) {
-    const response = await fetch(`https://api.are.na/v2/channels/${channelId}`);
+    const response = await fetch(`https://api.are.na/v2/channels/${channelId}?per=200`, {cache: 'no-cache'});
 
     const data = await response.json();
     const title = data.title; // this is channel title
