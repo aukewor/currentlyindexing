@@ -44,6 +44,9 @@ getChannelInfo(channelId)
 
 
 const go = function () {
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+
     const items = document.querySelectorAll('section figure')
     const navHeight = navTag.offsetHeight
     const itemNum = items.length
