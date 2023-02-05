@@ -34,7 +34,6 @@ async function getChannelInfo(channelId) {
         })
         ele.addEventListener('mouseout', function () {
             imgTag.style.display = "none"
-            imgTag.src = "assets/loading-l-600.gif"
         })
     })
 }
@@ -68,7 +67,6 @@ window.addEventListener('resize', () => {
 })
 
 const turnoffImage = function () {
-
     imgTag.addEventListener('click', () => {
         imgTag.style.display = 'none'
     })
