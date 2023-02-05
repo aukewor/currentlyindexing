@@ -51,10 +51,12 @@ const go = function () {
     const navHeight = navTag.offsetHeight
     const itemNum = items.length
 
-    sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
-    const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
+    const secHeight = sectionTag.getBoundingClientRect().height
+    // sectionTag.style.height = window.innerHeight - 40 - navHeight + "px"
+    // const typeSize = (window.innerHeight - navHeight - (itemNum - 1)) / (1.2 * itemNum)
+    const typeSize = (secHeight - (itemNum - 1)) / (1.2 * itemNum)
+    console.log(secHeight)
     bodyTag.style.fontSize = `${typeSize}px`
-}
 
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(go, 400)

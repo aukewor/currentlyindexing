@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<link href="assets/reset.css" rel="stylesheet">
 	<link href="assets/app.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
@@ -44,15 +44,16 @@
 		where she keeps a record of images and text generated and collected from her work, studio, and daily life.
 		The site will remain
 		changing across time as there are always work and life in progress. Powered by <a target="_blank"
-			href="https://github.com/typography-and-interaction-too/archive">are.na</a>.
+			href="https://github.com/typography-and-interaction-too/archive">are.na</a>, website by <a target="_blank"
+			href="https://mianweiwang.com/">Mianwei Wang</a>.
 	</article>
 	<header>
 		<nav>
 			<i>Currently Indexing: </i>
-			<a href="./visit.html">visit</a>,
-			<a href="./images.html">images</a>,
-			<a href="./studio.html">studio</a>,
-			<a href="./texts.html">texts</a>
+			<a href="./visit.html">Visit</a>,
+			<a href="./images.html">Images</a>,
+			<a href="./studio.html">Studio</a>,
+			<a href="./texts.html">Texts</a>
 		</nav>
 	</header>
 
@@ -139,6 +140,23 @@
 		</figure>
 	</template>
 
+	<p>a</p>
+	<div>Website visit count:</div>
+	<div class="website-counter"></div>
+	<button id="reset">Reset</button>
 </body>
+<script>
+	var visitCount = localStorage.getItem("page_view");
+
+	// Check if page_view entry is present
+	if (visitCount) {
+		visitCount = Number(visitCount) + 1;
+		localStorage.setItem("page_view", visitCount);
+	} else {
+		visitCount = 1;
+		localStorage.setItem("page_view", 1);
+	}
+	console.log("total visit:" + visitCount);
+</script>
 
 </html>
