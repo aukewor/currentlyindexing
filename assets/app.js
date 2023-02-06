@@ -55,10 +55,10 @@ const go = function () {
     bodyTag.style.fontSize = `${typeSize}px`
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(go, 400)
+// document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(go, 500)
     turnoffImage()
-}, false);
+// }, false);
 
 
 window.addEventListener('resize', () => {
